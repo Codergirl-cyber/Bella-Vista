@@ -126,27 +126,47 @@ body {
 }
 
 /* Input styles */
-.form-input {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  .form-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--cream);
   padding: 0.875rem 1.25rem;
   width: 100%;
   font-family: var(--font-jost);
   font-size: 0.875rem;
   letter-spacing: 0.05em;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
   outline: none;
 }
 
 .form-input::placeholder {
-  color: rgba(245, 240, 232, 0.3);
+  color: rgba(245, 240, 232, 0.5);
   letter-spacing: 0.05em;
 }
 
 .form-input:focus {
-  border-color: rgba(201, 168, 76, 0.6);
-  background: rgba(255,255,255,0.07);
+  border-color: rgba(201, 168, 76, 0.65);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.08);
+} 
+
+.glass-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 27, 24, 0.70),
+    rgba(24, 22, 20, 0.60)
+  );
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 /* Nav link hover */
