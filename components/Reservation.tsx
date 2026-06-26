@@ -42,8 +42,19 @@ export default function Reservation() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-dark-800/92" />
-      </div>
+        {/* General dark overlay */}
+    <div className="absolute inset-0 bg-dark-800/65" />
+
+    {/* Extra darkness only behind the heading */}
+    <div
+      className="absolute top-0 left-0 right-0 h-[320px]"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.15), transparent)",
+      }}
+    />
+  </div>
+      
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <SectionHeader
@@ -79,7 +90,12 @@ export default function Reservation() {
           </FadeInSection>
         ) : (
           <FadeInSection delay={0.1}>
-            <form onSubmit={handleSubmit} className="max-w-3xl mx-auto">
+            {/* <form onSubmit={handleSubmit} className="max-w-3xl mx-auto"> */}
+             <div className="glass-panel max-w-4xl mx-auto mt-16 px-10 py-8 md:px-12 md:py-10">
+             <form onSubmit={handleSubmit}>
+           
+  
+       
               <div className="grid md:grid-cols-2 gap-5">
                 {/* Name */}
                 <div className="md:col-span-1">
@@ -218,6 +234,7 @@ export default function Reservation() {
                 </p>
               </div>
             </form>
+            </div>
           </FadeInSection>
         )}
       </div>
